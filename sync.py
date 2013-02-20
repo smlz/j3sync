@@ -91,6 +91,8 @@ def fix_tags(files):
                    albumartist == "'".join(artist.split(u"\u02bb")) or \
                    (albumartist == u"Turboneger" and artist == u"Turbonegro"):
                     albumartist = artist
+                if albumartist == u"The Jimi Hendrix Experience":
+                    albumartist = "Jimi Hendrix"
                 if u"..." + albumartistsort == albumartist:   # Trail of Dead
                     tags['artist'] = albumartistsort
                     albumartist = artist
